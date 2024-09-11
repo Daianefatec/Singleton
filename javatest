@@ -1,0 +1,43 @@
+public class fila {
+	
+	private Queue<String> fila;
+	private static fila instanciaunica;
+	
+    // construtor privado
+	private fila() {
+		fila=new linkedlist<>();
+	}
+	// metodo estatico para obter instancia unica
+	public static fila getInstancia() {
+		if(instanciaunica ==null) {
+			instanciaunica = new fila();
+		}
+		return instanciaunica;
+	}
+	
+	public void colocarfila(){
+	
+	}
+	public void ImprimeDocumento(){
+		
+	}
+	public void RemoveDocumento(){
+		
+	}
+	public void RemoveTodosDocumentos(){
+		
+	}
+
+}
+public class ExecucaoFila {
+	
+	public static void main(String[] args) {
+		fila Fila = fila.getInstancia();
+		
+		Fila.colocarfila("Doc1.pdf");
+		Fila.ImprimeDocumento();
+		Fila.RemoveDocumento();
+		Fila.RemoveTodosDocumentos();
+	}
+
+}
